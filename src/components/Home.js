@@ -106,5 +106,14 @@ export default function Home (){
 
     ])
 
+    const addToCart = (id) => {
+        setCartItems((prevState)=>[...prevState, products.find((item)=> item.id===id)
+        ]);
+    }
+
+    const removeFromCart = (id) => {
+        setTimeout(() =>{ setCartItems(cartItems.filter((item) => item.id !== id))},0)
+    }
+
     return ()
 }
